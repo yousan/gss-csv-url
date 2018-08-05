@@ -1,6 +1,30 @@
 export default class GSSCSVUrl {
-    constructor = () => {
+    constructor() {
         console.log('Hello ES6!');
+    }
+
+    /**
+     * GSSのファイルIDを取得する i.e. 1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY
+     *
+     * @param url
+     */
+    fileid(url) {
+        let pattern = 'docs.google.com\/spreadsheets\/d\/([^\/]+)\/';
+        let matched = url.match(pattern);
+        return matched[1] || 0;
+    }
+
+
+    /**
+     * GSSのシートIDを取得する i.e. gid=12345678
+     *
+     * @param url
+     */
+    gid(url) {
+        let pattern = '#gid=([0-9]+)';
+        let matched = url.match(pattern);
+        // console.log(matched[1] || 0);
+        return matched[1] || 0;
     }
 
     /**
@@ -13,9 +37,14 @@ export default class GSSCSVUrl {
      *
      * todo: 未実装だよ！
      */
-    gss_url = (url) => {
-        /**
+    gss_url(url){
+        let fileid = this.fileid(url)
+        let gid = this.gid(url)
 
+        let csv_url = 'https://docs.google.com/spreadsheets/d/' + fileid + '/export?format=csv&gid=' + gid;
+        
+        return csv_url;
+        /**
          // 1. docs.google.comで始まっている
          // 1. URLパスの最後がexportになっている
 
@@ -54,8 +83,9 @@ export default class GSSCSVUrl {
          // e.g. https://docs.google.com/spreadsheets/d/1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY/export?usp=sharing&format=csv
          return $url;
          **/
-        return url;
     }
 }
 
 const gss_csv_url = new GSSCSVUrl();
+const url = 'https://docs.google.com/spreadsheets/d/1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY/edit#gid=374636390';
+console.log(gss_csv_url.gss_url(url));
