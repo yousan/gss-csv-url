@@ -1,5 +1,5 @@
-const gss_csv_url = require('./gss-csv-url');
-console.log(gss_csv_url)
+import GSSCSVUrl from './gss-csv-url';
+const gss_csv_url = new GSSCSVUrl();
 
 test('hello', () => {
     let input_url, expect_url;
