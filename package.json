@@ -4,7 +4,7 @@
   "description": "Convert Google Spread Sheet (GSS) normal URL into CSV downloadable URL.",
   "main": "lib/gss-csv-url.js",
   "scripts": {
-    "test": "jest && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "MIT",
