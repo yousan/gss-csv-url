@@ -37,12 +37,12 @@ export default class GSSCSVUrl {
      *
      * todo: 未実装だよ！
      */
-    gss_url(url){
+    url(url){
         let fileid = this.fileid(url)
         let gid = this.gid(url)
 
         let csv_url = 'https://docs.google.com/spreadsheets/d/' + fileid + '/export?format=csv&gid=' + gid;
-        
+
         return csv_url;
         /**
          // 1. docs.google.comで始まっている
@@ -87,5 +87,5 @@ export default class GSSCSVUrl {
 }
 
 const gss_csv_url = new GSSCSVUrl();
-const url = 'https://docs.google.com/spreadsheets/d/1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY/edit#gid=374636390';
-console.log(gss_csv_url.gss_url(url));
+// const url = 'https://docs.google.com/spreadsheets/d/1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY/edit#gid=374636390';
+// console.log(gss_csv_url.gss_url(url));
