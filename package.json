@@ -6,6 +6,11 @@
   "scripts": {
     "test": "jest"
   },
+  "files": [
+    "lib/gss-csv-url.js",
+    "index.js",
+    "jest.config.js"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {

@@ -37,7 +37,7 @@ export default class GSSCSVUrl {
      *
      * todo: 未実装だよ！
      */
-    url(url){
+    url(url) {
         let fileid = this.fileid(url)
         let gid = this.gid(url)
 
