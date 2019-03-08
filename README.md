@@ -1,5 +1,7 @@
 # How to use
 
+Convert Google SpreadSheet URL into CSV downloadable URL.
+
 ```bash
 $ npm install gss-csv-url
 ```
