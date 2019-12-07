@@ -7,7 +7,7 @@ $ npm install gss-csv-url
 ```
 
 ```javascript
-const chalk = require('gss-csv-url');
+const gss_csv_url = require('gss-csv-url');
 
 const input_url = 'https://docs.google.com/spreadsheets/d/1yfMIdt8wgBPrMY3UwiCTsX3EN_2gcLCmPAEy8dfYeLY/edit#gid=374636390';
 const csv_url = gss_csv_url.url(input_url);
