@@ -1,3 +1,5 @@
+# package.json で version を書き換える
+
 # 公開されるファイルの確認
 # npm pack
 
