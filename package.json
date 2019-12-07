@@ -1,6 +1,10 @@
 {
   "name": "gss-csv-url",
   "version": "v1.1.1",
+  "engines": {
+    "node": ">=6 <=11",
+    "npm": ">=3"
+  },
   "description": "Convert Google Spread Sheet (GSS) normal URL into CSV downloadable URL.",
   "main": "lib/gss-csv-url.js",
   "scripts": {
@@ -17,6 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/yousan/gss-csv-url.git"
   },
+  "type": "module",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
